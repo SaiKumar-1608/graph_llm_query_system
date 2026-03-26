@@ -1,0 +1,147 @@
+/* ============================================
+   HOME CONTAINER LAYOUT
+   ============================================ */
+.home-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: var(--bg-primary);
+  gap: 0;
+}
+
+/* ============================================
+   CHAT PANEL (LEFT)
+   ============================================ */
+.home-chat {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-right: 1px solid var(--border);
+  background: var(--bg-primary);
+  min-width: 300px;
+}
+
+/* ============================================
+   GRAPH PANEL (CENTER)
+   ============================================ */
+.home-graph {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  background: var(--bg-secondary);
+}
+
+.home-empty-graph {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+.empty-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  color: var(--text-tertiary);
+}
+
+.empty-content h3 {
+  margin: 0;
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.empty-content p {
+  margin: 0;
+  font-size: var(--font-size-base);
+  opacity: 0.6;
+}
+
+/* ============================================
+   DETAILS PANEL (RIGHT)
+   ============================================ */
+.home-details {
+  flex: 0 0 20%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-left: 1px solid var(--border);
+  background: var(--bg-primary);
+  min-width: 250px;
+}
+
+/* ============================================
+   RESPONSIVE LAYOUT
+   ============================================ */
+@media (max-width: 1200px) {
+  .home-chat {
+    flex: 0 0 35%;
+    min-width: 320px;
+  }
+
+  .home-graph {
+    flex: 1 1 40%;
+  }
+
+  .home-details {
+    flex: 0 0 25%;
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .home-chat {
+    flex: 0 0 35%;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    min-height: 300px;
+  }
+
+  .home-graph {
+    flex: 1 1 auto;
+    min-height: 400px;
+  }
+
+  .home-details {
+    flex: 0 0 25%;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-chat {
+    flex: 0 0 30%;
+    min-height: 250px;
+  }
+
+  .home-graph {
+    flex: 1;
+    min-height: 350px;
+  }
+
+  .home-details {
+    flex: 0 0 30%;
+    min-height: 250px;
+  }
+
+  .empty-content h3 {
+    font-size: var(--font-size-lg);
+  }
+
+  .empty-content p {
+    font-size: var(--font-size-sm);
+  }
+}

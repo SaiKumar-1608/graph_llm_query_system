@@ -1,91 +1,69 @@
 import React from "react";
+import "./NodeDetails.css";
 
 const NodeDetails = ({ selectedNode }) => {
-  // ------------------------------
-  // EMPTY STATE
-  // ------------------------------
   if (!selectedNode) {
     return (
-      <div style={styles.container}>
-        <h3>📌 Node Details</h3>
-        <p>Select a node from the graph to view details</p>
+      <div className="node-details-container">
+        <div className="node-details-header">
+          <h3 className="node-details-title">📌 Node Details</h3>
+        </div>
+        <div className="node-empty">
+          <p>Select a node to view details</p>
+        </div>
       </div>
     );
   }
 
-  // ------------------------------
-  // EXTRACT INFO
-  // ------------------------------
   const { id, data } = selectedNode;
-
-  // id format: order_740506 → split
   const [type, actualId] = id.split("_");
 
   return (
-    <div style={styles.container}>
-      <h3>📌 Node Details</h3>
-
-      {/* ------------------------------ */}
-      {/* BASIC INFO */}
-      {/* ------------------------------ */}
-      <div style={styles.card}>
-        <p>
-          <strong>Type:</strong> {type.toUpperCase()}
-        </p>
-        <p>
-          <strong>ID:</strong> {actualId}
-        </p>
+    <div className="node-details-container">
+      <div className="node-details-header">
+        <h3 className="node-details-title">📌 Node Details</h3>
       </div>
 
-      {/* ------------------------------ */}
-      {/* LABEL */}
-      {/* ------------------------------ */}
-      {data?.label && (
-        <div style={styles.card}>
-          <strong>Label:</strong>
-          <p>{data.label}</p>
+      <div className="node-details-content">
+        {/* BASIC INFO CARD */}
+        <div className="node-card">
+          <h4 className="card-title">Type & ID</h4>
+          <div className="card-body">
+            <div className="detail-item">
+              <span className="detail-label">Type:</span>
+              <span className={`detail-value type-badge type-${type}`}>
+                {type.toUpperCase()}
+              </span>
+            </div>
+            <div className="detail-item">
+              <span className="detail-label">ID:</span>
+              <span className="detail-value">{actualId}</span>
+            </div>
+          </div>
         </div>
-      )}
 
-      {/* ------------------------------ */}
-      {/* RAW DATA */}
-      {/* ------------------------------ */}
-      <div style={styles.card}>
-        <strong>Raw Data:</strong>
-        <pre style={styles.dataBox}>
-          {JSON.stringify(data || {}, null, 2)}
-        </pre>
+        {/* LABEL CARD */}
+        {data?.label && (
+          <div className="node-card">
+            <h4 className="card-title">Label</h4>
+            <div className="card-body">
+              <p className="label-text">{data.label}</p>
+            </div>
+          </div>
+        )}
+
+        {/* RAW DATA CARD */}
+        <div className="node-card">
+          <h4 className="card-title">Raw Data</h4>
+          <div className="card-body">
+            <pre className="data-box">
+              {JSON.stringify(data || {}, null, 2)}
+            </pre>
+          </div>
+        </div>
       </div>
     </div>
   );
-};
-
-// ------------------------------
-// STYLES
-// ------------------------------
-const styles = {
-  container: {
-    padding: "15px",
-    borderLeft: "1px solid #ddd",
-    height: "100vh",
-    overflowY: "auto",
-    background: "#fafafa",
-  },
-  card: {
-    background: "#fff",
-    padding: "12px",
-    borderRadius: "8px",
-    marginBottom: "15px",
-    boxShadow: "0 1px 3px rgba(0,0,0,0.1)",
-  },
-  dataBox: {
-    background: "#f4f4f4",
-    padding: "10px",
-    borderRadius: "6px",
-    fontSize: "12px",
-    overflowX: "auto",
-    marginTop: "8px",
-  },
 };
 
 export default NodeDetails;

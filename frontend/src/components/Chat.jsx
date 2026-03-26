@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { sendQuery } from "../services/api";
+import "./Chat.css";
 
 const Chat = ({ onGraphLoad }) => {
   const [query, setQuery] = useState("");
@@ -63,100 +64,73 @@ const Chat = ({ onGraphLoad }) => {
   };
 
   return (
-    <div style={styles.container}>
-      <h2>🧠 Ask Your Data</h2>
+    <div className="chat-container">
+      <div className="chat-header">
+        <h2 className="chat-title">🧠 Ask Your Data</h2>
+      </div>
 
-      {/* INPUT */}
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <input
-          type="text"
-          placeholder="Try: 'Show orders for customer 310000109'"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          style={styles.input}
-        />
-        <button type="submit" style={styles.button} disabled={loading}>
-          {loading ? "Loading..." : "Ask"}
-        </button>
-      </form>
+      <div className="chat-content">
+        {/* INPUT FORM */}
+        <form onSubmit={handleSubmit} className="chat-form">
+          <input
+            type="text"
+            placeholder="Try: 'Show orders for customer 310000109'"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            className="chat-input"
+            disabled={loading}
+          />
+          <button type="submit" className="chat-button" disabled={loading}>
+            {loading ? "Loading..." : "Ask"}
+          </button>
+        </form>
 
-      {/* ERROR */}
-      {error && <p style={styles.error}>❌ {error}</p>}
-
-      {/* RESPONSE */}
-      {response && (
-        <div style={styles.responseBox}>
-          {/* SUMMARY */}
-          <div style={styles.section}>
-            <h3>📊 Summary</h3>
-            <p>{response.summary || "No summary available"}</p>
+        {/* ERROR STATE */}
+        {error && (
+          <div className="chat-error">
+            <span className="error-icon">⚠️</span>
+            <p>{error}</p>
           </div>
+        )}
 
-          {/* SQL */}
-          <div style={styles.section}>
-            <h3>🧾 Generated SQL</h3>
-            <pre style={styles.sqlBox}>
-              {response.sql || "No SQL generated"}
-            </pre>
-          </div>
+        {/* RESPONSE RESULTS */}
+        {response && (
+          <div className="chat-response">
+            {/* SUMMARY SECTION */}
+            <div className="response-section">
+              <h3 className="section-title">📊 Summary</h3>
+              <p className="section-content">
+                {response.summary || "No summary available"}
+              </p>
+            </div>
 
-          {/* ROW COUNT */}
-          <div style={styles.section}>
-            <h3>📦 Rows</h3>
-            <p>{response.rowCount ?? 0} rows returned</p>
+            {/* SQL SECTION */}
+            <div className="response-section">
+              <h3 className="section-title">🧾 Generated SQL</h3>
+              <pre className="sql-box">
+                {response.sql || "No SQL generated"}
+              </pre>
+            </div>
+
+            {/* ROW COUNT SECTION */}
+            <div className="response-section">
+              <h3 className="section-title">📦 Results</h3>
+              <p className="section-content">
+                <strong>{response.rowCount ?? 0}</strong> rows returned
+              </p>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+
+        {/* EMPTY STATE */}
+        {!response && !error && (
+          <div className="chat-empty">
+            <p>✨ Ask a question about your data to get started</p>
+          </div>
+        )}
+      </div>
     </div>
   );
-};
-
-// ------------------------------
-// STYLES
-// ------------------------------
-const styles = {
-  container: {
-    padding: "20px",
-    borderRight: "1px solid #ddd",
-    height: "100vh",
-    overflowY: "auto",
-    background: "#fafafa",
-  },
-  form: {
-    display: "flex",
-    gap: "10px",
-    marginBottom: "20px",
-  },
-  input: {
-    flex: 1,
-    padding: "10px",
-    borderRadius: "6px",
-    border: "1px solid #ccc",
-  },
-  button: {
-    padding: "10px 16px",
-    backgroundColor: "#007bff",
-    color: "white",
-    border: "none",
-    borderRadius: "6px",
-    cursor: "pointer",
-  },
-  responseBox: {
-    marginTop: "20px",
-  },
-  section: {
-    marginBottom: "20px",
-  },
-  sqlBox: {
-    background: "#f5f5f5",
-    padding: "10px",
-    borderRadius: "6px",
-    overflowX: "auto",
-    fontSize: "12px",
-  },
-  error: {
-    color: "red",
-  },
 };
 
 export default Chat;

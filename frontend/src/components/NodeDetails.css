@@ -1,0 +1,231 @@
+/* ============================================
+   NODE DETAILS CONTAINER
+   ============================================ */
+.node-details-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+.node-details-header {
+  padding: var(--space-lg);
+  border-bottom: 2px solid var(--border);
+  background: var(--bg-secondary);
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.node-details-title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* ============================================
+   CONTENT AREA
+   ============================================ */
+.node-details-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+.node-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.node-empty p {
+  margin: 0;
+  font-size: var(--font-size-sm);
+}
+
+/* ============================================
+   CARD STYLING
+   ============================================ */
+.node-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.node-card:hover {
+  border-color: var(--border-dark);
+  box-shadow: var(--shadow-md);
+}
+
+.card-title {
+  margin: 0;
+  padding: var(--space-md) var(--space-lg);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-body {
+  padding: var(--space-lg);
+}
+
+/* ============================================
+   DETAIL ITEMS
+   ============================================ */
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  font-size: var(--font-size-sm);
+}
+
+.detail-item:not(:last-child) {
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 60px;
+}
+
+.detail-value {
+  color: var(--text-primary);
+  word-break: break-word;
+  font-family: var(--font-mono);
+  font-size: var(--font-size-xs);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-primary);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+/* ============================================
+   TYPE BADGE
+   ============================================ */
+.type-badge {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: none !important;
+  background: var(--primary) !important;
+  color: white !important;
+}
+
+.type-customer {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%) !important;
+}
+
+.type-order {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%) !important;
+}
+
+.type-delivery {
+  background: linear-gradient(135deg, #fb7185 0%, #f43f5e 100%) !important;
+}
+
+.type-billing {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%) !important;
+}
+
+.type-payment {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%) !important;
+}
+
+.type-journal {
+  background: linear-gradient(135deg, #9ca3af 0%, #6b7280 100%) !important;
+}
+
+/* ============================================
+   LABEL TEXT
+   ============================================ */
+.label-text {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  line-height: 1.6;
+  word-break: break-word;
+}
+
+/* ============================================
+   DATA BOX
+   ============================================ */
+.data-box {
+  margin: 0;
+  padding: var(--space-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  font-size: var(--font-size-xs);
+  font-family: var(--font-mono);
+  color: var(--text-primary);
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-height: 300px;
+}
+
+/* ============================================
+   SCROLLBAR
+   ============================================ */
+.node-details-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.node-details-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.node-details-content::-webkit-scrollbar-thumb {
+  background: var(--border-dark);
+  border-radius: 3px;
+}
+
+.node-details-content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .node-details-content {
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .card-body {
+    padding: var(--space-md);
+  }
+
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

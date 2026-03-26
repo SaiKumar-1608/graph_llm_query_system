@@ -1,59 +1,32 @@
 import React from "react";
 import Home from "./pages/Home";
+import "./App.css";
 
 const App = () => {
   return (
-    <div style={styles.app}>
+    <div className="app">
       {/* ------------------------------ */}
-      {/* HEADER (OPTIONAL BUT IMPRESSIVE) */}
+      {/* HEADER */}
       {/* ------------------------------ */}
-      <header style={styles.header}>
-        <h1 style={styles.title}>📊 Graph LLM System</h1>
-        <p style={styles.subtitle}>
-          Ask questions → Get insights → Explore relationships
-        </p>
+      <header className="app-header">
+        <div className="header-content">
+          <div className="header-title-group">
+            <h1 className="header-title">📊 Graph LLM System</h1>
+            <p className="header-subtitle">
+              Ask questions → Get insights → Explore relationships
+            </p>
+          </div>
+        </div>
       </header>
 
       {/* ------------------------------ */}
       {/* MAIN CONTENT */}
       {/* ------------------------------ */}
-      <div style={styles.content}>
+      <main className="app-content">
         <Home />
-      </div>
+      </main>
     </div>
   );
-};
-
-// ------------------------------
-// STYLES
-// ------------------------------
-const styles = {
-  app: {
-    fontFamily: "system-ui, -apple-system, sans-serif",
-    backgroundColor: "#f9fafb",
-    height: "100vh",
-    display: "flex",
-    flexDirection: "column",
-  },
-  header: {
-    padding: "10px 20px",
-    backgroundColor: "#111827",
-    color: "white",
-    borderBottom: "1px solid #333",
-  },
-  title: {
-    margin: 0,
-    fontSize: "20px",
-  },
-  subtitle: {
-    margin: 0,
-    fontSize: "12px",
-    color: "#9ca3af",
-  },
-  content: {
-    flex: 1,
-    overflow: "hidden",
-  },
 };
 
 export default App;

@@ -1,62 +1,181 @@
-/* ------------------------------
-   MAIN CONTAINER FIX (CRITICAL)
------------------------------- */
+/* ============================================
+   REACT FLOW WRAPPER
+   ============================================ */
 .react-flow {
   width: 100%;
-  height: 100%;   /* 🔥 REQUIRED */
-  background-color: #f9fafb;
+  height: 100%;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+  background-attachment: fixed;
 }
 
-/* ------------------------------
+/* ============================================
    NODE STYLING
------------------------------- */
+   ============================================ */
 .react-flow__node {
-  font-size: 12px;
-  font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 8px;
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 2px solid transparent;
+  transition: all var(--transition-base);
+  box-shadow: var(--shadow-md);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
 }
 
-/* ------------------------------
+.react-flow__node:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.react-flow__node.selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.2);
+}
+
+/* Node type specific colors */
+.react-flow__node[data-id*="customer"],
+.react-flow__node[style*="rgb(255, 215, 0)"] {
+  background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+  color: #78350f;
+}
+
+.react-flow__node[data-id*="order"],
+.react-flow__node[style*="rgb(135, 206, 235)"] {
+  background: linear-gradient(135deg, #bfdbfe 0%, #93c5fd 100%);
+  color: #1e3a8a;
+}
+
+.react-flow__node[data-id*="delivery"],
+.react-flow__node[style*="rgb(255, 160, 122)"] {
+  background: linear-gradient(135deg, #fecaca 0%, #fca5a5 100%);
+  color: #7c2d12;
+}
+
+.react-flow__node[data-id*="billing"],
+.react-flow__node[style*="rgb(144, 238, 144)"] {
+  background: linear-gradient(135deg, #bbf7d0 0%, #86efac 100%);
+  color: #15803d;
+}
+
+.react-flow__node[data-id*="payment"],
+.react-flow__node[style*="rgb(221, 160, 221)"] {
+  background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+  color: #5b21b6;
+}
+
+/* ============================================
    EDGE STYLING
------------------------------- */
+   ============================================ */
 .react-flow__edge-path {
-  stroke: #555;
+  stroke: var(--primary);
   stroke-width: 2;
+  opacity: 0.6;
 }
 
-/* ------------------------------
-   CONTROLS (ZOOM / FIT)
------------------------------- */
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--accent);
+  stroke-width: 3;
+  opacity: 1;
+}
+
+.react-flow__edge.animated .react-flow__edge-path {
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* ============================================
+   CONTROLS & TOOLBAR
+   ============================================ */
 .react-flow__controls {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  gap: var(--space-sm);
+  padding: var(--space-sm);
 }
 
-/* ------------------------------
+.react-flow__controls-button {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.react-flow__controls-button:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+.react-flow__controls-button:active {
+  transform: scale(0.95);
+}
+
+/* ============================================
    MINIMAP
------------------------------- */
+   ============================================ */
 .react-flow__minimap {
-  background: #ffffff;
-  border: 1px solid #ddd;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
 }
 
-/* ------------------------------
-   GRAPH CONTAINER (VERY IMPORTANT)
------------------------------- */
+/* ============================================
+   BACKGROUND
+   ============================================ */
+.react-flow__background {
+  background: var(--bg-primary);
+}
+
+/* ============================================
+   CONTAINER & LAYOUT
+   ============================================ */
 .graph-container {
   width: 100%;
-  height: calc(100vh - 60px); /* 🔥 ensures visible area */
+  height: 100%;
   overflow: hidden;
+  position: relative;
 }
 
-/* ------------------------------
-   EMPTY STATE TEXT
------------------------------- */
+/* ============================================
+   EMPTY STATE
+   ============================================ */
 .graph-empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 50px;
-  color: #666;
-  font-size: 14px;
+  color: var(--text-tertiary);
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.graph-empty h3 {
+  margin: 0 0 var(--space-md) 0;
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+}
+
+.graph-empty p {
+  margin: 0;
+  font-size: var(--font-size-base);
 }
