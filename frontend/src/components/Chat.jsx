@@ -23,7 +23,7 @@ const Chat = ({ onGraphLoad }) => {
       const res = await sendQuery(query);
 
       // ✅ FIXED: Correct path
-      const data = res.data.data;
+      const data = res.data.data?.data;
 
       console.log("📦 API Response:", data);
 
