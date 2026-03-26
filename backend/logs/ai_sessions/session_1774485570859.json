@@ -1,0 +1,28 @@
+{
+  "userQuery": "Show complete flow for order 740506",
+  "sql": "SELECT o.id AS order_id, o.order_date, o.status AS order_status, \n       d.id AS delivery_id, d.delivery_date, d.status AS delivery_status, \n       b.id AS billing_id, b.billing_date, b.total_amount, b.status AS billing_status, \n       p.id AS payment_id, p.payment_date, p.amount AS payment_amount, p.method AS payment_method, \n       je.id AS journal_entry_id, je.entry_date, je.debit, je.credit\nFROM sales_orders o\nLEFT JOIN deliveries d ON o.id = d.order_id\nLEFT JOIN billing_documents b ON d.id = b.delivery_id\nLEFT JOIN payments p ON b.id = p.billing_id\nLEFT JOIN journal_entries je ON p.id = je.payment_id\nWHERE o.id = 740506\nLIMIT 50;",
+  "rows": [
+    {
+      "order_id": "740506",
+      "order_date": "2025-03-30T18:30:00.000Z",
+      "order_status": "C",
+      "delivery_id": null,
+      "delivery_date": null,
+      "delivery_status": null,
+      "billing_id": null,
+      "billing_date": null,
+      "total_amount": null,
+      "billing_status": null,
+      "payment_id": null,
+      "payment_date": null,
+      "payment_amount": null,
+      "payment_method": null,
+      "journal_entry_id": null,
+      "entry_date": null,
+      "debit": null,
+      "credit": null
+    }
+  ],
+  "summary": "There are no records found for order 740506. It appears that this order has not progressed to any delivery, billing, or payment stages yet.",
+  "duration": 7402
+}

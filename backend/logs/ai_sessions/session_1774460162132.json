@@ -1,0 +1,7 @@
+{
+  "userQuery": "Show orders for customer 101",
+  "sql": "SELECT o.*\r\nFROM sales_orders o\r\nWHERE o.customer_id = 101\r\nLIMIT 50;",
+  "rows": [],
+  "summary": "No records were found for customer 101's orders.",
+  "duration": 5111
+}

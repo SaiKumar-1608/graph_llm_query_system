@@ -1,0 +1,22 @@
+{
+  "userQuery": "Show orders for customer 310000109",
+  "sql": "SELECT o.*\r\nFROM sales_orders o\r\nWHERE o.customer_id = 310000109\r\nLIMIT 50;",
+  "rows": [
+    {
+      "id": "740507",
+      "customer_id": "310000109",
+      "order_date": "2025-03-30T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740508",
+      "customer_id": "310000109",
+      "order_date": "2025-03-30T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    }
+  ],
+  "summary": "Customer 310000109 has placed 2 orders. Both orders were created on March 30, 2025, and are currently marked as completed.",
+  "duration": 3553
+}

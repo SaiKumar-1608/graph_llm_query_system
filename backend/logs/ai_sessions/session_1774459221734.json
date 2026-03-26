@@ -1,0 +1,7 @@
+{
+  "userQuery": "Show complete flow of order7",
+  "sql": "SELECT o.id AS order_id, o.order_date, o.status AS order_status, \n       d.id AS delivery_id, d.delivery_date, d.status AS delivery_status, \n       b.id AS billing_id, b.billing_date, b.total_amount, b.status AS billing_status, \n       p.id AS payment_id, p.payment_date, p.amount AS payment_amount, p.method AS payment_method\nFROM sales_orders o\nLEFT JOIN deliveries d ON o.id = d.order_id\nLEFT JOIN billing_documents b ON d.id = b.delivery_id\nLEFT JOIN payments p ON b.id = p.billing_id\nWHERE o.id = 7\nLIMIT 50;",
+  "rows": [],
+  "summary": "No records were found for order 7.",
+  "duration": 7374
+}

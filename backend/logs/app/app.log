@@ -1,0 +1,65 @@
+{"timestamp":"2026-03-25T07:03:17.756Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-25T07:03:46.110Z","level":"INFO","message":"Incoming request","method":"GET","url":"/"}
+{"timestamp":"2026-03-25T07:03:46.158Z","level":"INFO","message":"Incoming request","method":"GET","url":"/favicon.ico"}
+{"timestamp":"2026-03-25T07:04:38.089Z","level":"INFO","message":"Incoming request","method":"GET","url":"/"}
+{"timestamp":"2026-03-25T07:05:12.110Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T07:05:40.557Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T07:06:11.029Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T15:18:22.119Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-25T15:36:51.351Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T15:36:58.260Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:02:47.281Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:02:54.717Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:02:54.760Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:20:14.358Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:20:53.796Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:20:58.282Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:20:58.309Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:29:34.574Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:29:46.303Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:29:51.632Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:29:51.663Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:34:53.434Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:35:57.018Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:38:28.548Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-25T17:38:32.359Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740507"}
+{"timestamp":"2026-03-25T17:41:41.489Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-25T17:48:30.793Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740507"}
+{"timestamp":"2026-03-25T17:48:38.837Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:39:23.447Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:39:30.895Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-26T00:39:30.902Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740506"}
+{"timestamp":"2026-03-26T00:40:16.893Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:40:21.092Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740507"}
+{"timestamp":"2026-03-26T00:51:22.739Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:51:45.461Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:56:02.086Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:57:18.763Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T00:57:22.356Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740507"}
+{"timestamp":"2026-03-26T00:57:22.375Z","level":"INFO","message":"Incoming request","method":"GET","url":"/api/graph/740507"}
+{"timestamp":"2026-03-26T01:15:28.700Z","level":"INFO","message":"Incoming request","method":"POST","url":"/api/query"}
+{"timestamp":"2026-03-26T01:22:15.095Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-26T02:02:39.808Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-26T05:45:27.991Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-26T05:47:27.763Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/"}
+{"timestamp":"2026-03-26T05:47:27.814Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/favicon.ico"}
+{"timestamp":"2026-03-26T05:47:38.951Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/api"}
+{"timestamp":"2026-03-26T05:48:14.514Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/"}
+{"timestamp":"2026-03-26T05:48:28.223Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/API"}
+{"timestamp":"2026-03-26T05:48:35.173Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/api"}
+{"timestamp":"2026-03-26T05:53:21.222Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Show orders for customer 310000109"}}
+{"timestamp":"2026-03-26T05:54:47.598Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Show orders for customer 310000109"}}
+{"timestamp":"2026-03-26T05:55:18.536Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-26T05:55:43.011Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Show orders for customer 310000109"}}
+{"timestamp":"2026-03-26T07:16:22.441Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-26T07:17:02.457Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Show orders for customer 310000109"}}
+{"timestamp":"2026-03-26T07:17:15.418Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/api/graph/expand/customer-310000109"}
+{"timestamp":"2026-03-26T07:17:16.554Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/api/graph/expand/order-740507"}
+{"timestamp":"2026-03-26T07:17:17.620Z","level":"INFO","message":"📥 Incoming Request","method":"GET","url":"/api/graph/expand/order-740508"}
+{"timestamp":"2026-03-26T07:18:07.064Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Show all orders"}}
+{"timestamp":"2026-03-26T14:10:30.906Z","level":"INFO","message":"🚀 Server running on port 3000"}
+{"timestamp":"2026-03-26T14:10:52.271Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"List top 10 orders"}}
+{"timestamp":"2026-03-26T14:11:02.620Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"List top 10 orders"}}
+{"timestamp":"2026-03-26T14:11:13.017Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Show all orders"}}
+{"timestamp":"2026-03-26T14:11:29.426Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Get all customer orders"}}
+{"timestamp":"2026-03-26T14:11:52.530Z","level":"INFO","message":"📥 Incoming Request","method":"POST","url":"/api/query","body":{"query":"Get all customer"}}

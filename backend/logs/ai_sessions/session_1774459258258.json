@@ -1,0 +1,358 @@
+{
+  "userQuery": "show me all orders",
+  "sql": "SELECT o.*\r\nFROM sales_orders o\r\nLIMIT 50;",
+  "rows": [
+    {
+      "id": "740506",
+      "customer_id": "310000108",
+      "order_date": "2025-03-30T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740507",
+      "customer_id": "310000109",
+      "order_date": "2025-03-30T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740508",
+      "customer_id": "310000109",
+      "order_date": "2025-03-30T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740509",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740510",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740511",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740512",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740513",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740514",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740515",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740516",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740517",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740518",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740519",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740520",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740521",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740522",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740523",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740524",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740525",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740526",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740527",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740528",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740529",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740530",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740531",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740532",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740533",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740534",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740535",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740536",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740537",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740538",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740539",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740540",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740541",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740542",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740543",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740544",
+      "customer_id": "320000082",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740545",
+      "customer_id": "320000088",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740546",
+      "customer_id": "320000085",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740547",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740548",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740549",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740550",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740551",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740552",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740553",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740554",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    },
+    {
+      "id": "740555",
+      "customer_id": "320000083",
+      "order_date": "2025-04-01T18:30:00.000Z",
+      "status": "C",
+      "created_at": "2026-03-25T05:14:00.001Z"
+    }
+  ],
+  "summary": "A total of 50 orders have been retrieved. These orders were placed by various customers between March 30, 2025, and April 1, 2025, and all are currently marked as completed.",
+  "duration": 4460
+}
