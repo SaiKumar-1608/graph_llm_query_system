@@ -4,7 +4,7 @@ import axios from "axios";
 // AXIOS INSTANCE
 // ------------------------------
 const API = axios.create({
-  baseURL: "http://localhost:3000/api",
+  baseURL: "https://graph-llm-query-system.onrender.com/",
 });
 
 // ------------------------------
