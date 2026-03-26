@@ -1,62 +1,99 @@
 /* ------------------------------
-   MAIN CONTAINER FIX (CRITICAL)
+   MAIN CONTAINER FIX
 ------------------------------ */
 .react-flow {
   width: 100%;
-  height: 100%;   /* 🔥 REQUIRED */
-  background-color: #f9fafb;
+  height: 100%;
+  background: transparent !important; /* Let the parent glass panel handle background */
 }
 
 /* ------------------------------
-   NODE STYLING
+   NODE STYLING overrides
 ------------------------------ */
 .react-flow__node {
-  font-size: 12px;
+  font-family: var(--font-sans);
+  font-size: 13px;
   font-weight: 500;
-  padding: 6px 10px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.react-flow__node:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.react-flow__node.selected {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  box-shadow: 0 0 10px var(--primary-glow);
 }
 
 /* ------------------------------
    EDGE STYLING
 ------------------------------ */
 .react-flow__edge-path {
-  stroke: #555;
+  stroke: var(--text-muted);
   stroke-width: 2;
+  stroke-dasharray: 4;
 }
 
 /* ------------------------------
    CONTROLS (ZOOM / FIT)
 ------------------------------ */
 .react-flow__controls {
-  background: white;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.react-flow__controls button {
+  border-bottom: 1px solid var(--glass-border);
+  background: transparent;
+  fill: var(--text-main);
+  transition: background 0.2s ease;
+}
+
+.react-flow__controls button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+@media (prefers-color-scheme: dark) {
+  .react-flow__controls button:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 /* ------------------------------
    MINIMAP
 ------------------------------ */
 .react-flow__minimap {
-  background: #ffffff;
-  border: 1px solid #ddd;
+  background: var(--glass-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
 }
 
-/* ------------------------------
-   GRAPH CONTAINER (VERY IMPORTANT)
------------------------------- */
-.graph-container {
-  width: 100%;
-  height: calc(100vh - 60px); /* 🔥 ensures visible area */
-  overflow: hidden;
+.react-flow__minimap-mask {
+  fill: rgba(0, 0, 0, 0.1);
 }
 
-/* ------------------------------
-   EMPTY STATE TEXT
------------------------------- */
-.graph-empty {
-  text-align: center;
-  margin-top: 50px;
-  color: #666;
-  font-size: 14px;
+@media (prefers-color-scheme: dark) {
+  .react-flow__minimap-mask {
+    fill: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.react-flow__minimap-node {
+  fill: var(--primary);
+  rx: 4;
+  ry: 4;
 }
