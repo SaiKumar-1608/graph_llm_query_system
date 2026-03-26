@@ -3,9 +3,7 @@ import axios from "axios";
 // ------------------------------
 // AXIOS INSTANCE
 // ------------------------------
-const API = axios.create({
-  baseURL: "https://graph-llm-query-system.onrender.com/",
-});
+const BASE_URL = import.meta.env.VITE_API_URL;
 
 // ------------------------------
 // QUERY API
