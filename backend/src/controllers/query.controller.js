@@ -1,5 +1,4 @@
 import { processUserQuery } from "../services/query.service.js";
-import { transformToGraph } from "../utils/graphTransformer.js";
 
 // ------------------------------
 // HANDLE USER QUERY (MAIN API)
@@ -26,35 +25,23 @@ export async function handleQuery(req, res) {
     const result = await processUserQuery(query);
 
     /**
-     * Expected result structure (based on your logs):
+     * result structure (from service):
      * {
-     *   summary,
-     *   sql,
-     *   rows
+     *   success: true,
+     *   data: {
+     *     sql,
+     *     rowCount,
+     *     rows,
+     *     summary,
+     *     graph
+     *   }
      * }
      */
 
-    const rows = result.rows || [];
-
-    console.log("📊 Rows fetched:", rows.length);
-
     // ------------------------------
-    // ✅ TRANSFORM TO GRAPH (NEW)
-    // ------------------------------
-    let graph = { nodes: [], edges: [] };
-
-    if (rows.length > 0) {
-      graph = transformToGraph(rows);
-    }
-
-    console.log("📊 Graph nodes:", graph.nodes.length);
-    console.log("📊 Graph edges:", graph.edges.length);
-
-    // ------------------------------
-    // RESPONSE
+    // RETURN CLEAN RESPONSE
     // ------------------------------
     return res.status(200).json(result);
-    
 
   } catch (error) {
     console.error("❌ Query Processing Error:", error.message);
